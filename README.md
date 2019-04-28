@@ -40,7 +40,8 @@ $ ./create_database.pl
 # Logstash configuration
 In your Logstash pipeline configuration, add this to your filter block:
 ```
-# Replace [src_ip] with the actual IP-adress field of the document
+# Replace [src_ip] with the actual IP-address field of the document
+
 if [src_ip] =~ /(^10\.)|(^172\.1[6-9]\.)|(^172\.2[0-9]\.)|(^172\.3[0-1]\.)|(^192\.168\.)/ {
   geoip {
     source   => "[src_ip]"
