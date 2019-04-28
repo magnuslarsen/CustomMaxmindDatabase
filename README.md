@@ -6,21 +6,21 @@ I use this in my Elastic-stack installation, your mileage may vary!
 # Prerequisites
 On Arch Linux based system:
 ```
-$ pacman -S libmaxminddb cpanminus
+# pacman -S libmaxminddb cpanminus
 ```
 
 On Debian based systems:
 ```
-$ add-apt-repository ppa:maxmind/ppa
-$ apt update
-$ apt install libmaxminddb0 libmaxminddb-dev mmdb-bin cpanminus
+# add-apt-repository ppa:maxmind/ppa
+# apt update
+# apt install libmaxminddb0 libmaxminddb-dev mmdb-bin cpanminus
 ```
 
 For other Liunx based systems, see [the official repository](https://github.com/maxmind/libmaxminddb)
 
 To install the perl modules, simply run this:
 ```
-$ cpanm MaxMind::DB::Common MaxMind::DB::Writer
+# cpanm MaxMind::DB::Common MaxMind::DB::Writer
 ```
 
 # Create the database
@@ -34,7 +34,7 @@ To add more languages, just add the [code](https://en.wikipedia.org/wiki/ISO_316
 
 Once your changes are complete, just run the script:
 ```
-# ./create_database.pl
+$ ./create_database.pl
 ```
 
 # Logstash configuration
