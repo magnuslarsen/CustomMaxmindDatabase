@@ -21,6 +21,7 @@ my %types = (
   location           => 'map',
   longitude          => 'double',
   names              => 'map',
+  postal             => 'map'
   time_zone          => 'utf8_string',
 );
 
@@ -75,10 +76,13 @@ my %internal_networks = (
         dk => 'Europa',
       },
     },
+    postal => {
+      code => '2100'
+    }
   },
 
   # Or as one line
-  '192.168.11.0/24' => { city => { geoname_id => 2618424, names      => { en => 'Copenhagen', dk => 'København', }, }, country => { geoname_id => 2623032, iso_code   => 'DK', names      => { en => 'Denmark', dk => 'Danmark', }, }, location => { accuracy_radius => 50, latitude        => 55.677191, longitude       => 12.568164, time_zone       => 'Europe/Copenhagen', }, continent => { code       => 'EU', geoname_id => 6255148, names      => { en => 'Europe', dk => 'Europa', }, }, },
+  '192.168.11.0/24' => { city => { geoname_id => 2618424, names      => { en => 'Copenhagen', dk => 'København', }, }, country => { geoname_id => 2623032, iso_code   => 'DK', names      => { en => 'Denmark', dk => 'Danmark', }, }, location => { accuracy_radius => 50, latitude        => 55.677191, longitude       => 12.568164, time_zone       => 'Europe/Copenhagen', }, continent => { code       => 'EU', geoname_id => 6255148, names      => { en => 'Europe', dk => 'Europa', }, },  postal => { code => '2100' } },
 );
 
 for my $address (keys %internal_networks) {
