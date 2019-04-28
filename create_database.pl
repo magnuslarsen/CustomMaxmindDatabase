@@ -21,7 +21,7 @@ my %types = (
   location           => 'map',
   longitude          => 'double',
   names              => 'map',
-  postal             => 'map'
+  postal             => 'map',
   time_zone          => 'utf8_string',
 );
 
