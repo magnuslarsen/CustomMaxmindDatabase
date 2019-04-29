@@ -5,7 +5,7 @@ use warnings;
 use MaxMind::DB::Writer::Tree;
 use Net::Works::Network;
 
-my $file = '/etc/logstash/my-database-name.mmdb';
+my $file = '/usr/share/logstash/my-database-name.mmdb';
 
 my %types = (
   accuracy_radius    => 'uint32',
@@ -28,7 +28,7 @@ my %types = (
 my $tree = MaxMind::DB::Writer::Tree->new(
   ip_version               => 4,
   record_size              => 24,
-  database_type            => 'my-database-name',
+  database_type            => 'GeoIP2-City',
   languages                => ['en', 'dk'],
   description              => { en => 'My geoIP database', dk => 'Min geoIP database' },
   map_key_type_callback    => sub { $types{ $_[0] } },

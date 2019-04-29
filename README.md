@@ -46,7 +46,7 @@ if [src_ip] =~ /(^10\.)|(^172\.1[6-9]\.)|(^172\.2[0-9]\.)|(^172\.3[0-1]\.)|(^192
   geoip {
     source   => "[src_ip]"
     target   => "[geoip]"
-    database => "/etc/logstash/my-database-name.mmdb"
+    database => "/usr/share/logstash/my-database-name.mmdb"
   }
 }
 else if [src_ip] =~ /^127\./ {
